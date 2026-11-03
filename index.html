@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Never Hide Tech Empire · Websites, Apps & Systems in Ghana</title>
+<meta name="description" content="We build websites, apps and business systems for Ghanaian businesses. See a working demo of your idea before you pay a cedi. Call or WhatsApp 0599 931 348." />
+<meta name="theme-color" content="#06080f" />
+<meta property="og:title" content="Never Hide Tech Empire · We build it, you see it, then you pay" />
+<meta property="og:description" content="Websites, ordering apps, Google Maps, aluminium & glass, internet systems. Free working demo before you pay." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#06080f; --bg2:#0a0e1a; --card:#10151f; --line:rgba(255,255,255,.09);
+  --txt:#f2f5fb; --mut:#98a3b8; --gold:#ffb52e; --gold2:#ff7a2f; --em:#25d366;
+  --radius:22px; --shadow:0 30px 70px -34px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+    radial-gradient(1000px 560px at 8% -10%,rgba(255,181,46,.16),transparent 60%),
+    radial-gradient(840px 520px at 96% 2%,rgba(37,211,102,.11),transparent 62%),
+    var(--bg);
+  color:var(--txt);font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{line-height:1.14;letter-spacing:-.025em;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.sec{padding:64px 0}
+.center{text-align:center}
+
+/* nav */
+header{position:sticky;top:0;z-index:60;backdrop-filter:blur(20px);
+  background:rgba(6,8,15,.78);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;padding:13px 20px;max-width:1120px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:1rem;color:#241500;
+  background:linear-gradient(140deg,var(--gold),var(--gold2));box-shadow:0 12px 26px -12px rgba(255,150,40,.95)}
+.bname{font-weight:800;font-size:.95rem;letter-spacing:-.02em;line-height:1.15}
+.bsub{display:block;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.navlinks{display:flex;gap:22px;margin-left:auto;font-size:.84rem;font-weight:600;color:var(--mut)}
+.navlinks a:hover{color:var(--txt)}
+.navCta{display:inline-flex;align-items:center;gap:7px;background:var(--em);color:#03210f;font-weight:800;
+  font-size:.82rem;padding:11px 17px;border-radius:999px;margin-left:8px;
+  box-shadow:0 14px 30px -14px rgba(37,211,102,.95)}
+.burger{display:none;margin-left:auto;width:42px;height:40px;border-radius:12px;border:1px solid var(--line);
+  background:rgba(255,255,255,.05);color:#fff;font-size:1.1rem}
+
+/* hero */
+.hero{padding:66px 0 40px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:.66rem;font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;color:#ffd27a;padding:8px 15px;border-radius:999px;
+  background:rgba(255,181,46,.12);border:1px solid rgba(255,181,46,.3)}
+h1{font-size:clamp(2.1rem,6.4vw,4rem);margin:20px 0 18px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(115deg,var(--gold),var(--gold2) 55%,#ffe1a3);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:clamp(1rem,2.5vw,1.14rem);max-width:660px;margin:0 0 26px}
+.lead b{color:#e8eefb}
+.btns{display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;
+  font:inherit;font-weight:800;font-size:.9rem;padding:15px 24px;border-radius:999px;transition:.18s}
+.btn:hover{transform:translateY(-2px)}
+.btnGold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#231400;box-shadow:0 18px 40px -18px rgba(255,150,40,.95)}
+.btnEm{background:var(--em);color:#03210f;box-shadow:0 18px 40px -18px rgba(37,211,102,.9)}
+.btnGhost{background:rgba(255,255,255,.06);color:var(--txt);box-shadow:inset 0 0 0 1px var(--line)}
+.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.trust span{display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:700;color:#cfd8e8;
+  background:rgba(255,255,255,.045);border:1px solid var(--line);padding:8px 13px;border-radius:999px}
+
+/* section heads */
+.sHead{max-width:640px;margin:0 auto 34px;text-align:center}
+.sHead .kicker{font-size:.64rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px}
+.sHead h2{font-size:clamp(1.6rem,4.4vw,2.5rem);margin-bottom:10px}
+.sHead p{color:var(--mut);margin:0;font-size:.95rem}
+
+/* services */
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:linear-gradient(180deg,#121826,#0e131d);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,181,46,.34)}
+.card .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.25rem;
+  background:rgba(255,181,46,.13);border:1px solid rgba(255,181,46,.26);margin-bottom:14px}
+.card h3{font-size:1.06rem;margin-bottom:7px}
+.card p{margin:0;color:var(--mut);font-size:.87rem}
+.card ul{margin:12px 0 0;padding-left:18px;color:var(--mut);font-size:.83rem}
+.card li{margin-bottom:5px}
+.card li::marker{color:var(--gold)}
+
+/* demos */
+.demoGrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.demo{background:linear-gradient(180deg,#121826,#0d121c);border:1px solid var(--line);border-radius:26px;
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.2s}
+.demo:hover{transform:translateY(-4px);border-color:rgba(255,181,46,.4)}
+.demoHead{height:132px;display:grid;place-items:center;font-size:2.5rem;position:relative}
+.demoHead.food{background:radial-gradient(120% 120% at 20% 0%,#ff8a3d,#7d210d)}
+.demoHead.phone{background:radial-gradient(120% 120% at 20% 0%,#3f86ff,#131f45)}
+.demoTag{position:absolute;top:12px;left:12px;font-size:.56rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;background:rgba(0,0,0,.45);padding:6px 11px;border-radius:999px}
+.demoBody{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.demoBody h3{font-size:1.1rem}
+.demoBody p{margin:0;color:var(--mut);font-size:.85rem;flex:1}
+.miniChips{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
+.miniChips span{font-size:.64rem;font-weight:700;padding:5px 10px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);color:#c9d3e4}
+
+/* process */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));counter-reset:st}
+.pstep{background:linear-gradient(180deg,#121826,#0e131d);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);position:relative}
+.pstep::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;border-radius:22px 22px 0 0;
+  background:linear-gradient(90deg,var(--gold),transparent)}
+.num{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:800;
+  background:rgba(255,181,46,.14);color:#ffce7a;border:1px solid rgba(255,181,46,.3);margin-bottom:12px}
+.pstep h3{font-size:1rem;margin-bottom:6px}
+.pstep p{margin:0;color:var(--mut);font-size:.86rem}
+.guarantee{margin-top:18px;background:linear-gradient(135deg,rgba(255,181,46,.15),rgba(37,211,102,.1));
+  border:1px solid rgba(255,181,46,.3);border-radius:var(--radius);padding:26px;text-align:center}
+.guarantee h3{font-size:clamp(1.15rem,3.4vw,1.5rem);margin-bottom:9px}
+.guarantee p{margin:0 auto;max-width:660px;color:#ecdfc8;font-size:.9rem}
+.guarantee b{color:#fff}
+
+/* work */
+.work{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.wcard{background:linear-gradient(180deg,#121826,#0e131d);border:1px solid var(--line);border-radius:20px;
+  padding:22px;display:flex;flex-direction:column;gap:6px;transition:.2s}
+.wcard:hover{transform:translateY(-3px);border-color:rgba(37,211,102,.4)}
+.wcard .tagRow{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--em);box-shadow:0 0 0 4px rgba(37,211,102,.16)}
+.wtag{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8de9b6}
+.wcard h3{font-size:1.02rem}
+.wcard p{margin:0;color:var(--mut);font-size:.84rem;flex:1}
+.wlink{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:800;color:var(--gold);margin-top:10px}
+
+/* packages */
+.packs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:stretch}
+.pack{background:linear-gradient(180deg,#121826,#0d121c);border:1px solid var(--line);border-radius:24px;
+  padding:26px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.pack.best{border-color:rgba(255,181,46,.5);background:linear-gradient(180deg,#1a1f2e,#101623);
+  box-shadow:0 34px 74px -34px rgba(255,160,50,.4)}
+.pack .badge{font-size:.58rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#231400;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));padding:6px 11px;border-radius:999px;align-self:flex-start;margin-bottom:14px}
+.pack h3{font-size:1.16rem;margin-bottom:6px}
+.pack .who{color:var(--mut);font-size:.82rem;margin-bottom:14px}
+.pack ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:9px}
+.pack li{font-size:.85rem;color:#d7dfee;display:flex;gap:9px;align-items:flex-start}
+.pack li::before{content:"✓";color:var(--em);font-weight:800;flex:0 0 auto}
+.pack .note{font-size:.74rem;color:var(--mut);margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+
+/* why */
+.whyGrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.why{display:flex;gap:12px;padding:18px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.why i{font-style:normal;font-size:1.15rem;line-height:1.3}
+.why b{display:block;font-size:.9rem;margin-bottom:3px}
+.why small{color:var(--mut);font-size:.8rem;line-height:1.55;display:block}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px;margin:0 auto}
+details{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:16px;padding:0;overflow:hidden}
+summary{cursor:pointer;padding:17px 20px;font-weight:700;font-size:.92rem;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-weight:800;font-size:1.1rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 20px 18px;color:var(--mut);font-size:.86rem}
+
+/* contact */
+.contact{background:linear-gradient(180deg,#121826,#0b1017);border:1px solid var(--line);border-radius:28px;
+  padding:34px;box-shadow:var(--shadow);display:grid;gap:26px;grid-template-columns:1.05fr .95fr;align-items:start}
+.contact h2{font-size:clamp(1.5rem,4vw,2.15rem);margin-bottom:10px}
+.contact p{color:var(--mut);font-size:.92rem;margin:0 0 18px}
+.phoneBig{display:block;font-size:clamp(1.7rem,6vw,2.6rem);font-weight:800;
+  background:linear-gradient(115deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
+.payNote{font-size:.78rem;color:var(--mut);margin-bottom:18px}
+.fRow{display:grid;gap:10px}
+.fRow label{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9fabc2}
+.fRow input,.fRow textarea,.fRow select{width:100%;font:inherit;font-size:.88rem;color:#fff;padding:13px 15px;
+  border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.045);outline:none}
+.fRow input:focus,.fRow textarea:focus,.fRow select:focus{border-color:rgba(255,181,46,.55)}
+.fRow textarea{min-height:92px;resize:vertical}
+.two{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+
+/* footer */
+footer{border-top:1px solid var(--line);margin-top:40px;padding:34px 0 120px;background:rgba(0,0,0,.28)}
+.footGrid{display:grid;gap:24px;grid-template-columns:1.4fr 1fr 1fr}
+footer h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#8f9bb2;margin-bottom:12px}
+footer a{display:block;font-size:.85rem;color:var(--mut);padding:4px 0}
+footer a:hover{color:var(--txt)}
+.copy{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.75rem;color:#77839a;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* sticky wa */
+.wa{position:fixed;right:16px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+  background:var(--em);color:#03210f;font-weight:800;font-size:.86rem;padding:14px 20px;border-radius:999px;
+  box-shadow:0 20px 44px -16px rgba(37,211,102,.9)}
+.wa:active{transform:scale(.97)}
+
+@media(max-width:860px){
+  .navlinks{display:none}
+  .burger{display:block}
+  .contact{grid-template-columns:1fr}
+  .footGrid{grid-template-columns:1fr 1fr}
+  h1{font-size:clamp(1.95rem,8.5vw,2.6rem)}
+  .sec{padding:48px 0}
+  .hero{padding:40px 0 26px}
+  .navCta span.waT{display:none}
+}
+@media(max-width:520px){
+  .two{grid-template-columns:1fr}
+  .trust span{font-size:.72rem}
+  .wa{right:12px;bottom:14px;padding:13px 17px}
+  .wa span.waT{display:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Never Hide Tech Empire",
+  "description":"Websites, apps, business systems, Google Maps setup, aluminium and glass fabrication, and internet systems for businesses in Ghana.",
+  "telephone":"+233599931348",
+  "areaServed":"Ghana",
+  "address":{"@type":"PostalAddress","addressLocality":"Accra","addressCountry":"GH"},
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Website design and development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile and ordering apps"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Maps business listing"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aluminium and glass fabrication"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Internet and network installation"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="mark">◆</span>
+      <span class="bname">NEVER HIDE<span class="bsub">Tech Empire</span></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#demos">Demos</a>
+      <a href="#work">Our work</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="navCta" href="https://wa.me/233599931348?text=Hello%20Never%20Hide%20Tech%2C%20I%20want%20to%20discuss%20a%20website%20or%20app%20for%20my%20business.">
+      💬 <span class="waT">WhatsApp</span>
+    </a>
+    <button class="burger" onclick="document.getElementById('mobileNav').style.display='flex'">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="wrap hero">
+    <span class="pill">◆ Accra, Ghana · Building since 2019</span>
+    <h1>We build it first.<br /><em>You pay when you love it.</em></h1>
+    <p class="lead">
+      Websites, ordering apps, business systems and real shop work, built by one team in Accra.
+      Tell us what you want, down to the small details, and we put a <b>working version in your hand</b>
+      before you spend a cedi. If it is not what you pictured, we keep building or you pay nothing.
+    </p>
+    <div class="btns">
+      <a class="btn btnGold" href="#demos">👀 See the live demos</a>
+      <a class="btn btnEm" href="https://wa.me/233599931348?text=Hello%20Never%20Hide%20Tech%2C%20I%20want%20a%20demo%20for%20my%20business.%20My%20business%20is%3A%20">💬 Describe my idea</a>
+    </div>
+    <div class="trust">
+      <span>✅ Free working demo first</span>
+      <span>⚡ Demo in 24–72 hours</span>
+      <span>🔒 You own your accounts</span>
+      <span>💬 No hidden charges</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="wrap sec" id="services">
+    <div class="sHead">
+      <span class="kicker">What we do</span>
+      <h2>One team, from the website to the window frame</h2>
+      <p>Digital work and physical work, handled by people you can call by name.</p>
+    </div>
+    <div class="grid3">
+      <article class="card">
+        <div class="ico">🌐</div>
+        <h3>Websites that bring customers</h3>
+        <p>Fast, clean sites built for a phone screen first, because that is where your customers are.</p>
+        <ul>
+          <li>Business and shop websites</li>
+          <li>Landing pages that sell one thing well</li>
+          <li>Booking and enquiry forms straight to WhatsApp</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="ico">📱</div>
+        <h3>Apps &amp; ordering systems</h3>
+        <p>When a website is not enough, we build the app your business actually runs on.</p>
+        <ul>
+          <li>Restaurant menus with cart and delivery fee</li>
+          <li>Shop catalogues and stock tracking</li>
+          <li>Repair tickets, bookings, driver and delivery flows</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="ico">📍</div>
+        <h3>Google Maps &amp; visibility</h3>
+        <p>Make sure a customer searching your area finds you, not the shop down the road.</p>
+        <ul>
+          <li>Google Business Profile setup</li>
+          <li>Photos, opening hours and directions</li>
+          <li>Review link you can share on WhatsApp</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="ico">🪟</div>
+        <h3>Aluminium &amp; glass</h3>
+        <p>Windows, doors and glass work measured on site and fitted properly.</p>
+        <ul>
+          <li>Sliding windows, doors and partitions</li>
+          <li>Shop fronts and office glazing</li>
+          <li>Check, measure, fabricate, install</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="ico">📶</div>
+        <h3>Internet &amp; networks</h3>
+        <p>WiFi and cabling that stays connected when the whole shop is using it.</p>
+        <ul>
+          <li>Home and office network setup</li>
+          <li>Router configuration and coverage fixes</li>
+          <li>CCTV and smart device setup</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="ico">🛡️</div>
+        <h3>Security &amp; protection</h3>
+        <p>Because a growing business becomes a target, we help you lock things down.</p>
+        <ul>
+          <li>Scam and fraud checks before you pay anyone</li>
+          <li>Account and phone hardening</li>
+          <li>Staff awareness basics</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section class="wrap sec" id="demos">
+    <div class="sHead">
+      <span class="kicker">Proof, not promises</span>
+      <h2>Open a working demo right now</h2>
+      <p>Two real builds you can tap through on your phone. Yours will be built in your colours, with your name and your prices.</p>
+    </div>
+    <div class="demoGrid">
+      <article class="demo">
+        <div class="demoHead food"><span class="demoTag">Demo · Food business</span>🍲</div>
+        <div class="demoBody">
+          <h3>Chop House</h3>
+          <p>A food business that takes orders from the phone. Dishes, cart, delivery fee, and the order lands on WhatsApp already written out with the total.</p>
+          <div class="miniChips"><span>Menu</span><span>Cart</span><span>Delivery fee</span><span>WhatsApp order</span></div>
+          <a class="btn btnGold" href="https://neverhide-demos.vercel.app/restaurant.html">Open this demo →</a>
+        </div>
+      </article>
+      <article class="demo">
+        <div class="demoHead phone"><span class="demoTag">Demo · Shop</span>📱</div>
+        <div class="demoBody">
+          <h3>Adora Phones</h3>
+          <p>A phone shop with real stock, grades and prices. Customers search, filter, open a phone, and ask about it on WhatsApp in one tap.</p>
+          <div class="miniChips"><span>Stock list</span><span>Search</span><span>Grades</span><span>Ask on WhatsApp</span></div>
+          <a class="btn btnGold" href="https://neverhide-demos.vercel.app/shop.html">Open this demo →</a>
+        </div>
+      </article>
+    </div>
+    <div class="center" style="margin-top:22px">
+      <a class="btn btnGhost" href="https://neverhide-demos.vercel.app">See both demos on one page →</a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="wrap sec" id="process">
+    <div class="sHead">
+      <span class="kicker">How we work</span>
+      <h2>Three steps, and no risk to you</h2>
+      <p>You never pay for something you have not touched with your own hand.</p>
+    </div>
+    <div class="steps">
+      <div class="pstep">
+        <div class="num">1</div>
+        <h3>Describe it, however you like</h3>
+        <p>Voice note or typed message. Your business name, the colours, the pages, the small details you want inside. Two minutes of talking is enough to start.</p>
+      </div>
+      <div class="pstep">
+        <div class="num">2</div>
+        <h3>We build a real demo</h3>
+        <p>A live link you open on your own phone. Tap the buttons, check your prices, read your own name on it. Not a picture. A working site.</p>
+      </div>
+      <div class="pstep">
+        <div class="num">3</div>
+        <h3>You approve, we finish and you pay</h3>
+        <p>You tell us what to change. We change it until it is right. Only when you are happy do we agree the price and complete the real business.</p>
+      </div>
+    </div>
+    <div class="guarantee">
+      <h3>🤝 The Never Hide promise</h3>
+      <p>
+        If the demo does not look like what you pictured, <b>say so and you do not pay</b>.
+        We would rather rebuild it three times than hand you something you are shy to share with your customers.
+        <b>No hidden charges, no hidden features, no hidden limits.</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="wrap sec" id="work">
+    <div class="sHead">
+      <span class="kicker">Already live</span>
+      <h2>Real businesses running on what we built</h2>
+      <p>Not mockups. These are live right now, being used by customers.</p>
+    </div>
+    <div class="work">
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Aluminium &amp; glass</span></div>
+        <h3>Safa Glass &amp; Aluminium</h3>
+        <p>A fabrication business with a full website, photo gallery, AI chat that answers customers, and instant owner alerts when someone asks for a price.</p>
+        <a class="wlink" href="https://safa-glass-aluminum.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Repair shop system</span></div>
+        <h3>Coldeen OS</h3>
+        <p>A complete phone repair shop: online booking with a real calendar, live repair tracking by ticket code, and an owner console for jobs, stock and prices.</p>
+        <a class="wlink" href="https://coldeen-os.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Food ordering</span></div>
+        <h3>GH Food Order</h3>
+        <p>A food business taking orders from the phone, with delivery tracking, a rider flow and an owner portal that beeps when a new order lands.</p>
+        <a class="wlink" href="https://gh-food-order.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Video editor</span></div>
+        <h3>NeverCut Studio</h3>
+        <p>A mobile video editor that fixes and merges clips on the phone, with AI direction, themes and a paid unlock flow through MoMo.</p>
+        <a class="wlink" href="https://nevercut-studio.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Platform</span></div>
+        <h3>Idea Arena</h3>
+        <p>A platform where people post ideas and get judged by the community, with accounts, admin control and automated WhatsApp follow-ups.</p>
+        <a class="wlink" href="https://ideaarena.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+      <article class="wcard">
+        <div class="tagRow"><span class="dot"></span><span class="wtag">Cyber security</span></div>
+        <h3>Cyber-Zero / SecureCheck</h3>
+        <p>A security platform that checks links and scams and explains the danger in plain language, built for people who are new to all this.</p>
+        <a class="wlink" href="https://securecheck-ui.vercel.app" target="_blank" rel="noreferrer">Open live site ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="wrap sec" id="packages">
+    <div class="sHead">
+      <span class="kicker">How we package it</span>
+      <h2>Start small, grow when it pays</h2>
+      <p>Every package starts with a free demo. Price is agreed after you have seen and approved it.</p>
+    </div>
+    <div class="packs">
+      <div class="pack">
+        <span class="badge">Starter</span>
+        <h3>The honest one-pager</h3>
+        <p class="who">For a shop, salon, school or service that needs to look serious online.</p>
+        <ul>
+          <li>A modern site that works perfectly on phones</li>
+          <li>Your services and prices listed clearly</li>
+          <li>WhatsApp and call buttons on every screen</li>
+          <li>Google-ready: title, description, map location</li>
+          <li>Free demo built before you pay</li>
+        </ul>
+        <p class="note">Best first step. You can upgrade to a full system later without losing anything.</p>
+      </div>
+      <div class="pack best">
+        <span class="badge">Most requested</span>
+        <h3>The business system</h3>
+        <p class="who">For shops and food businesses that take orders every day.</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Product or menu catalogue you control yourself</li>
+          <li>Orders or bookings that arrive on WhatsApp, already written</li>
+          <li>A private owner panel to change prices and stock</li>
+          <li>Photo gallery of your real work</li>
+          <li>Live order or repair tracking for your customers</li>
+        </ul>
+        <p class="note">This is the package most of our clients end up on. It replaces the back-and-forth calls.</p>
+      </div>
+      <div class="pack">
+        <span class="badge">Custom</span>
+        <h3>The full platform</h3>
+        <p class="who">For a business that needs its own app, accounts, or a whole workflow.</p>
+        <ul>
+          <li>Custom app or web app built around how you work</li>
+          <li>User accounts, staff roles, dashboards</li>
+          <li>Payments through MoMo or card</li>
+          <li>Automatic alerts to your phone when something happens</li>
+          <li>Scale-up support as you grow</li>
+        </ul>
+        <p class="note">We map the whole thing on paper first, then build it in stages you can see.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="wrap sec">
+    <div class="sHead">
+      <span class="kicker">Why people stay</span>
+      <h2>You are dealing with a person, not a form</h2>
+    </div>
+    <div class="whyGrid">
+      <div class="why"><i>🤝</i><div><b>You talk to the builder</b><small>No middleman, no call centre. The person who builds it is the person who answers your WhatsApp.</small></div></div>
+      <div class="why"><i>👀</i><div><b>You see it before you pay</b><small>A working demo, not a description. That is the whole reason people trust us with bigger jobs.</small></div></div>
+      <div class="why"><i>🔑</i><div><b>You own everything</b><small>Your domain, your accounts, your data. Nothing is locked to us, so you are never held to ransom.</small></div></div>
+      <div class="why"><i>⚡</i><div><b>Fast and it stays fast</b><small>Built light so it opens on a normal phone with normal data, not only on fast WiFi.</small></div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap sec" id="faq">
+    <div class="sHead">
+      <span class="kicker">Questions</span>
+      <h2>What people ask before starting</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Do I really pay nothing until I see it?</summary>
+        <p>Yes. We build a demo of your idea first and send you the link. You look at it on your own phone, show it to family, ask for changes. If it is not what you imagined, you tell us and you do not pay. Price is agreed only after you are happy with the direction.</p>
+      </details>
+      <details>
+        <summary>How long does a website take?</summary>
+        <p>A starter site usually takes a few days once we have your content and photos. A full business system with ordering or tracking takes longer, and we build it in stages so you see progress instead of silence.</p>
+      </details>
+      <details>
+        <summary>What do I need to give you?</summary>
+        <p>Your business name, your phone number, your prices, and any photos you have. If you do not have professional photos, we work with what you have and make it look good. A voice note describing what you want is enough to begin.</p>
+      </details>
+      <details>
+        <summary>Can I change prices myself later?</summary>
+        <p>Yes. Business system builds include a private panel where you change prices, stock, services and photos yourself, from your phone. You do not need to call anyone for small changes.</p>
+      </details>
+      <details>
+        <summary>Do you also do Google Maps and physical work?</summary>
+        <p>Yes. We set up your Google Business Profile so customers find you by name and area, and we fabricate and install aluminium and glass windows, doors and shop fronts after measuring on site.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Mobile Money to the same number you call, in stages that we agree before work starts. You always know what you are paying for before you pay it.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap sec" id="contact">
+    <div class="contact">
+      <div>
+        <h2>Tell us the idea. We will build the shape of it.</h2>
+        <p>Send a voice note if typing is hard. One message is enough to start, and the first demo costs you nothing.</p>
+        <a class="phoneBig" href="tel:+233599931348">0599 931 348</a>
+        <div class="payNote">Calls and WhatsApp · Mobile Money to the same number</div>
+        <div class="btns">
+          <a class="btn btnEm" href="https://wa.me/233599931348?text=Hello%20Never%20Hide%20Tech%2C%20I%20want%20a%20free%20demo%20for%20my%20business.">💬 Chat on WhatsApp</a>
+          <a class="btn btnGhost" href="tel:+233599931348">📞 Call now</a>
+        </div>
+      </div>
+      <form class="fRow" onsubmit="return sendBrief(event)">
+        <div class="two">
+          <div><label for="nm">Your name</label><input id="nm" required placeholder="e.g. Ama Mensah" /></div>
+          <div><label for="bz">Business</label><input id="bz" placeholder="e.g. Ama's Kitchen" /></div>
+        </div>
+        <div><label for="wd">What do you want built?</label>
+          <select id="wd">
+            <option>A website for my business</option>
+            <option>An app or ordering system</option>
+            <option>Google Maps listing</option>
+            <option>Aluminium &amp; glass work</option>
+            <option>Internet / network setup</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div><label for="dt">Describe it in your own words</label>
+          <textarea id="dt" placeholder="Colours, pages, the small details you want inside. Anything you can describe, we can build."></textarea>
+        </div>
+        <button class="btn btnGold" type="submit" style="margin-top:4px">Send my brief on WhatsApp →</button>
+        <p style="font-size:.72rem;color:var(--mut);margin:0">This opens WhatsApp with your message already written. Nothing is sent until you press send there.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footGrid">
+      <div>
+        <div class="brand" style="margin-bottom:10px">
+          <span class="mark">◆</span>
+          <span class="bname">NEVER HIDE<span class="bsub">Tech Empire</span></span>
+        </div>
+        <p style="color:var(--mut);font-size:.84rem;margin:0;max-width:320px">
+          Websites, apps, systems and real shop work for Ghanaian businesses.
+          You see it before you pay.
+        </p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Websites</a>
+        <a href="#services">Apps &amp; ordering</a>
+        <a href="#services">Google Maps</a>
+        <a href="#services">Aluminium &amp; glass</a>
+        <a href="#services">Internet systems</a>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <a href="tel:+233599931348">Call 0599 931 348</a>
+        <a href="https://wa.me/233599931348">WhatsApp</a>
+        <a href="https://neverhide-demos.vercel.app">Live demos</a>
+        <a href="#packages">Packages</a>
+        <a href="#faq">Questions</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr">2026</span> Never Hide Tech Empire · Accra, Ghana</span>
+      <span>Built by us, for you. 0599 931 348</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/233599931348?text=Hello%20Never%20Hide%20Tech%2C%20I%20want%20a%20free%20demo%20for%20my%20business.">
+  💬 <span class="waT">WhatsApp us</span>
+</a>
+
+<!-- simple full-screen mobile nav -->
+<div id="mobileNav" style="display:none;position:fixed;inset:0;z-index:80;background:rgba(6,8,15,.97);flex-direction:column;padding:26px 22px;gap:6px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <span class="bname" style="font-size:1rem">NEVER HIDE<span class="bsub">Tech Empire</span></span>
+    <button onclick="document.getElementById('mobileNav').style.display='none'" style="width:40px;height:38px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font-size:1rem">✕</button>
+  </div>
+  <a href="#services" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">Services</a>
+  <a href="#demos" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">Live demos</a>
+  <a href="#process" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">How we work</a>
+  <a href="#work" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">Our work</a>
+  <a href="#packages" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">Packages</a>
+  <a href="#faq" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700;border-bottom:1px solid var(--line)">FAQ</a>
+  <a href="#contact" onclick="closeNav()" style="padding:14px 0;font-size:1.05rem;font-weight:700">Contact</a>
+  <a class="btn btnEm" style="margin-top:18px" href="https://wa.me/233599931348?text=Hello%20Never%20Hide%20Tech%2C%20I%20want%20a%20free%20demo%20for%20my%20business.">💬 Chat on WhatsApp</a>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+function closeNav(){ document.getElementById('mobileNav').style.display='none'; }
+function sendBrief(e){
+  e.preventDefault();
+  const nm = document.getElementById('nm').value.trim();
+  const bz = document.getElementById('bz').value.trim();
+  const wd = document.getElementById('wd').value;
+  const dt = document.getElementById('dt').value.trim();
+  const msg =
+    'Hello Never Hide Tech, I want a demo.\n\n' +
+    'Name: ' + nm + '\n' +
+    'Business: ' + (bz || '-') + '\n' +
+    'I need: ' + wd + '\n' +
+    'Details: ' + (dt || '-');
+  window.open('https://wa.me/233599931348?text=' + encodeURIComponent(msg), '_blank');
+  return false;
+}
+/* close the mobile menu when a link is tapped anywhere */
+document.querySelectorAll('#mobileNav a').forEach(a => a.addEventListener('click', closeNav));
+</script>
+</body>
+</html>
